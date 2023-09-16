@@ -1,3 +1,4 @@
+*,
 *::before,
 *::after {
   margin: 0;
@@ -7,13 +8,13 @@
   scroll-behavior: smooth;
 }
 
-li {
+/* li {
     list-style: none;
-}
+} */
 
-img {
-    /* vertical-align: top; */
-}
+/* img {
+    vertical-align: top;
+} */
 
 
 .container {
@@ -32,17 +33,18 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;    
+    /* justify-content: space-around;     */
     border-radius: 1em;
+    /* margin: 0 auto; */
 }
 .main_screen {
     width: 90%;
     height: 85%;
     background: #bc84a6;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
     border-radius: 1em;
     overflow: hidden;
 }
@@ -54,6 +56,7 @@ img {
     display: flex;
     align-items: stretch;
     /* margin-left: -100%; */
+    transition: margin-left .4s ease-in-out;
 }
 
 .img_box {
@@ -98,10 +101,10 @@ img {
     width: 90%;
     height: 10%;
     background: #d0b476;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    /* align-items: flex-start; */
     
 }
 
@@ -109,7 +112,7 @@ img {
     width: 200px;
     height: 30px;
     background: #7e93da;
-    display: flex;
+    /* display: flex; */
 }
 
 .btn_box {  
@@ -119,35 +122,35 @@ img {
 }
 
 
-#option1:checked ~ .screen {
+#option1:checked ~ .main_screen .screen {
+    margin-left: 0%;
+}
+#option2:checked ~ .main_screen .screen {
+    margin-left: -100%;
+}
+#option3:checked ~ .main_screen .screen {
     margin-left: -200%;
 }
-#option2:checked ~ .screen {
+#option4:checked ~ .main_screen .screen {
+    margin-left: -300%;
+}
+#option5:checked ~ .main_screen .screen {
     margin-left: -400%;
 }
-#option3:checked ~ .screen {
-    margin-left: -600%;
-}
-#option4:checked ~ .screen {
-    margin-left: -800%;
-}
-#option5:checked ~ .screen {
-    margin-left: -1000%;
-}
-#option6:checked ~ .screen {
-    margin-left: -1200%;
+#option6:checked ~ .main_screen .screen {
+    margin-left: -500%;
 }
 
-form {
+/* form {
     display: flex;
     flex-direction: column;
-}
+} */
 
-.screen {
+/* .screen {
     order: 1;
-}
+} */
 
-input[type="radio"] {
+/* input[type="radio"] {
     order: 2;
     display: flex;
-}
+} */
