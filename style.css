@@ -54,17 +54,17 @@
     background: #76c7de;
     border-radius: 1em;
     display: flex;
-    align-items: stretch;
+    /* align-items: stretch; */
     /* margin-left: -100%; */
     transition: margin-left .4s ease-in-out;
 }
 
 .img_box {
-    border-radius: 1em;
-    height: fit-content;
-    flex: 1 0 auto;
-    background-size: cover;
-    background-position: center;
+    /* border-radius: 1em; */
+    /* height: fit-content; */
+    /* flex: 1 0 auto; */
+    /* background-size: cover; */
+    /* background-position: center; */
 }
 
 .cat1 {
@@ -109,15 +109,69 @@
 }
 
 .meme_title {
-    width: 200px;
-    height: 30px;
-    background: #7e93da;
+    width: 40%;
+    /* width: 600px; */
+    height: 50%;
+    background: #bf2eb0;
     display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+
+
+
+}
+
+.title_box {
+    width: 600%;
+    height: 100%;
+    background: #d3d712;
+    border-radius: 1em;
+    display: flex;
+    transition: margin-left .4s ease-in-out;
+    flex-direction: row;
+    white-space: nowrap;
+
+
+    
+    /* height: 40px; */
+    /* align-items: stretch; */
+    /* margin-left: -100%; */
+    justify-content: space-between;
+    flex-shrink: 0;
+    /* display: block; */
+    /* flex-wrap: wrap; */
+    /* overflow-x: auto;  */
+}
+
+
+.meme_title > div > div{
+    width: 16.6%;
+    /* width: 350px; */
+    height: 100%;
+    /* display: block; */
+
+
+
+
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row; */
+    /* white-space: nowrap; */
+    
+    /* align-items: stretch; */
+    display: inline-block;
+}
+
+.title1 {
+    /* display: block; */
+    background-color: #4841b1;
+    /* width: 100%; */
+
 }
 
 .btn_box {  
-    width: 100px;
-    height: 30px;
+    width: 15%;
+    height: 50%;
     background: #bc7dab;
     display: flex;
     flex-direction: row;
@@ -152,20 +206,33 @@ label {
     margin-left: -500%;
 }
 
-/* form {
-    display: flex;
-    flex-direction: column;
-} */
 
-/* .screen {
-    order: 1;
-} */
 
-/* input[type="radio"] {
-    order: 2;
-    display: flex;
-} */
+
+#option1:checked ~  .controle_pannel .meme_title > .title_box {
+    margin-left: 0%;
+}
+#option2:checked ~  .controle_pannel .meme_title > .title_box {
+    background-color: red;
+    margin-left: -100%;
+  
+}
+#option3:checked ~  .controle_pannel .meme_title > .title_box {
+    margin-left: -200%;
+}
+#option4:checked ~  .controle_pannel .meme_title > .title_box {
+    margin-left: -300%;
+}
+#option5:checked ~  .controle_pannel .meme_title > .title_box {
+    margin-left: -400%;
+}
+#option6:checked ~  .controle_pannel .meme_title > .title_box {
+    margin-left: -500%;
+}
+
+
 
 input[type="radio"] {
     display: none;
 }
+
