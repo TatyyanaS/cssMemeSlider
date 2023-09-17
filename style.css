@@ -160,26 +160,50 @@
   display: inline-block;
 }
 
-.title1 {
-  /* display: block; */
-  /* background-color: #4841b1; */
-  /* width: 100%; */
+.btn_box {
+  width: 18.5%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 0.1875rem;
+  align-items: center;
 }
 
-.btn_box {
-  /* width: 15%;
-    height: 50%;
-    background-color: #43444b;
+label {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-radius: 0.1875rem; */
+    align-items: center;
+    justify-content: center;
+}
+
+label>div {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #dfb6b2;
+  border-radius: 50%;
+  transform: border 0.5px ease-in-out;
+}
+
+label:hover {
+    cursor: pointer;
+}
+label:hover >div {
+  border: 2px solid #854f6c;
+  transform: border 0.5px ease-in-out;
+  cursor: pointer;
+  background: radial-gradient(
+    circle at center,
+    #854f6c 75%,
+    transparent 75%
+  ) !important;
+}
+/* .btn_box {
 
   width: 18.5%;
-  /* width: 25%; */
   height: 80%;
-  /* background: #bc7dab; */
-  /* background-color: #43444b; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -190,11 +214,11 @@
 label {
   width: 15px;
   height: 15px;
-  /* background: #5abac1; */
   border: 2px solid #dfb6b2;
   border-radius: 50%;
   transform: border 0.5px ease-in-out;
 }
+
 
 label:hover {
   border: 2px solid #854f6c;
@@ -205,20 +229,7 @@ label:hover {
     #854f6c 75%,
     transparent 75%
   ) !important;
-}
-
-#option1:checked ~ .controle_pannel .btn_box > label[for="option1"]:hover,
-#option2:checked ~ .controle_pannel .btn_box > label[for="option2"]:hover,
-#option3:checked ~ .controle_pannel .btn_box > label[for="option3"]:hover,
-#option4:checked ~ .controle_pannel .btn_box > label[for="option4"]:hover,
-#option5:checked ~ .controle_pannel .btn_box > label[for="option5"]:hover,
-#option6:checked ~ .controle_pannel .btn_box > label[for="option6"]:hover {
-  background: radial-gradient(
-    circle at center,
-    #854f6c 0%,
-    transparent 0%
-  ) !important;
-}
+} */
 
 #option1:checked ~ .main_screen .screen {
   margin-left: 0%;
@@ -262,6 +273,52 @@ input[type="radio"] {
   display: none;
 }
 
+#option1:checked ~ .controle_pannel .btn_box > label[for="option1"]:hover > div,
+#option2:checked ~ .controle_pannel .btn_box > label[for="option2"]:hover > div,
+#option3:checked ~ .controle_pannel .btn_box > label[for="option3"]:hover > div,
+#option4:checked ~ .controle_pannel .btn_box > label[for="option4"]:hover > div,
+#option5:checked ~ .controle_pannel .btn_box > label[for="option5"]:hover > div,
+#option6:checked ~ .controle_pannel .btn_box > label[for="option6"]:hover > div {
+  background: radial-gradient(
+    circle at center,
+    #854f6c 0%,
+    transparent 0%
+  ) !important;
+}
+
+#option1 ~ .controle_pannel .btn_box > label[for="option1"]>div,
+#option2 ~ .controle_pannel .btn_box > label[for="option2"]>div,
+#option3 ~ .controle_pannel .btn_box > label[for="option3"]>div,
+#option4 ~ .controle_pannel .btn_box > label[for="option4"]>div,
+#option5 ~ .controle_pannel .btn_box > label[for="option5"]>div,
+#option6 ~ .controle_pannel .btn_box > label[for="option6"]>div {
+  background: radial-gradient(circle at center, #dfb6b2 75%, transparent 75%);
+}
+
+#option1:checked ~ .controle_pannel .btn_box > label[for="option1"]>div,
+#option2:checked ~ .controle_pannel .btn_box > label[for="option2"]>div,
+#option3:checked ~ .controle_pannel .btn_box > label[for="option3"]>div,
+#option4:checked ~ .controle_pannel .btn_box > label[for="option4"]>div,
+#option5:checked ~ .controle_pannel .btn_box > label[for="option5"]>div,
+#option6:checked ~ .controle_pannel .btn_box > label[for="option6"]>div {
+  background: none;
+}
+
+
+
+/* #option1:checked ~ .controle_pannel .btn_box > label[for="option1"]:hover,
+#option2:checked ~ .controle_pannel .btn_box > label[for="option2"]:hover,
+#option3:checked ~ .controle_pannel .btn_box > label[for="option3"]:hover,
+#option4:checked ~ .controle_pannel .btn_box > label[for="option4"]:hover,
+#option5:checked ~ .controle_pannel .btn_box > label[for="option5"]:hover,
+#option6:checked ~ .controle_pannel .btn_box > label[for="option6"]:hover {
+  background: radial-gradient(
+    circle at center,
+    #854f6c 0%,
+    transparent 0%
+  ) !important;
+}
+
 #option1 ~ .controle_pannel .btn_box > label[for="option1"],
 #option2 ~ .controle_pannel .btn_box > label[for="option2"],
 #option3 ~ .controle_pannel .btn_box > label[for="option3"],
@@ -278,4 +335,4 @@ input[type="radio"] {
 #option5:checked ~ .controle_pannel .btn_box > label[for="option5"],
 #option6:checked ~ .controle_pannel .btn_box > label[for="option6"] {
   background: none;
-}
+} */
