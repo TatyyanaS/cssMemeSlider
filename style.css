@@ -1,0 +1,271 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #190019;
+}
+
+.screen_body {
+  background-color: #33353a;
+  width: 65%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 1em;
+}
+.main_screen {
+  height: 85%;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  border-radius: 1em;
+  overflow: hidden;
+  margin-top: 1%;
+}
+.screen {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.1875rem;
+  display: flex;
+  transition: margin-left 0.4s ease-in-out;
+}
+
+.cat1 {
+  background-image: url(img/twins_img.png);
+}
+.cat2 {
+  background-image: url(img/backpack_img.png);
+}
+.cat3 {
+  background-image: url(img/coat_img.png);
+}
+.cat4 {
+  background-image: url(img/green_cat_img.png);
+}
+.cat5 {
+  background-image: url(img/shirt_cat_img.png);
+}
+.cat6 {
+  background-image: url(img/sweetshot_img.png);
+}
+
+.img_box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex: 1 0 auto;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.controle_pannel {
+  width: 100%;
+  height: 15%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.meme_title {
+  width: 50%;
+  height: 80%;
+
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  margin-left: 1%;
+}
+
+.title_box {
+  width: 600%;
+  height: 100%;
+  border-radius: 1em;
+  display: flex;
+  transition: margin-left 0.4s ease-in-out;
+  flex-direction: row;
+  white-space: nowrap;
+  justify-content: space-between;
+  flex-shrink: 0;
+  font-size: 1.6vw;
+  color: #dfb6b2;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.meme_title > div > div {
+  width: 16.6%;
+  height: 100%;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+
+.btn_box {
+  width: 23%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 0.1875rem;
+  align-items: center;
+}
+
+label {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label > div {
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 0.13rem solid #dfb6b2;
+  border-radius: 50%;
+}
+
+label:hover {
+  cursor: pointer;
+}
+label:hover > div {
+  border: 0.13rem solid #854f6c;
+
+  cursor: pointer;
+  background: radial-gradient(
+    circle at center,
+    #854f6c 75%,
+    transparent 75%
+  ) !important;
+}
+
+#option1:checked ~ .main_screen .screen {
+  margin-left: 0%;
+}
+#option2:checked ~ .main_screen .screen {
+  margin-left: -100%;
+}
+#option3:checked ~ .main_screen .screen {
+  margin-left: -200%;
+}
+#option4:checked ~ .main_screen .screen {
+  margin-left: -300%;
+}
+#option5:checked ~ .main_screen .screen {
+  margin-left: -400%;
+}
+#option6:checked ~ .main_screen .screen {
+  margin-left: -500%;
+}
+
+#option1:checked ~ .controle_pannel .meme_title > .title_box {
+  margin-left: 0%;
+}
+#option2:checked ~ .controle_pannel .meme_title > .title_box {
+  margin-left: -100%;
+}
+#option3:checked ~ .controle_pannel .meme_title > .title_box {
+  margin-left: -200%;
+}
+#option4:checked ~ .controle_pannel .meme_title > .title_box {
+  margin-left: -300%;
+}
+#option5:checked ~ .controle_pannel .meme_title > .title_box {
+  margin-left: -400%;
+}
+#option6:checked ~ .controle_pannel .meme_title > .title_box {
+  margin-left: -500%;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+#option1:checked ~ .controle_pannel .btn_box > label[for="option1"]:hover > div,
+#option2:checked ~ .controle_pannel .btn_box > label[for="option2"]:hover > div,
+#option3:checked ~ .controle_pannel .btn_box > label[for="option3"]:hover > div,
+#option4:checked ~ .controle_pannel .btn_box > label[for="option4"]:hover > div,
+#option5:checked ~ .controle_pannel .btn_box > label[for="option5"]:hover > div,
+#option6:checked
+  ~ .controle_pannel
+  .btn_box
+  > label[for="option6"]:hover
+  > div {
+  background: radial-gradient(
+    circle at center,
+    #854f6c 0%,
+    transparent 0%
+  ) !important;
+}
+
+#option1 ~ .controle_pannel .btn_box > label[for="option1"] > div,
+#option2 ~ .controle_pannel .btn_box > label[for="option2"] > div,
+#option3 ~ .controle_pannel .btn_box > label[for="option3"] > div,
+#option4 ~ .controle_pannel .btn_box > label[for="option4"] > div,
+#option5 ~ .controle_pannel .btn_box > label[for="option5"] > div,
+#option6 ~ .controle_pannel .btn_box > label[for="option6"] > div {
+  background: radial-gradient(circle at center, #dfb6b2 75%, transparent 75%);
+}
+
+#option1:checked ~ .controle_pannel .btn_box > label[for="option1"] > div,
+#option2:checked ~ .controle_pannel .btn_box > label[for="option2"] > div,
+#option3:checked ~ .controle_pannel .btn_box > label[for="option3"] > div,
+#option4:checked ~ .controle_pannel .btn_box > label[for="option4"] > div,
+#option5:checked ~ .controle_pannel .btn_box > label[for="option5"] > div,
+#option6:checked ~ .controle_pannel .btn_box > label[for="option6"] > div {
+  background: none;
+}
+
+@media (max-width: 1024px) {
+  .screen_body {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .controle_pannel {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .screen_body {
+    background-color: #33353a;
+
+    width: 95%;
+
+    height: 90%;
+  }
+
+  .title_box {
+    font-size: 1.2rem;
+  }
+
+  .meme_title {
+    width: 100%;
+  }
+
+  .btn_box {
+    width: 30%;
+    height: 80%;
+  }
+}
